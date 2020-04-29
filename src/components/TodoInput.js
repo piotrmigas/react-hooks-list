@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { addTodoAction } from "../actions";
-import uuid from "uuid/v4";
+import { v4 as uuidv4 } from "uuid";
 
 const TodoInput = () => {
   const [todo, setTodo] = React.useState("");
@@ -18,7 +18,7 @@ const TodoInput = () => {
     e.preventDefault();
     if (todo.trim() === "") return;
     addTodo({
-      id: uuid(),
+      id: uuidv4(),
       name: todo,
       completed: false,
     });

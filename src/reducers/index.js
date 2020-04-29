@@ -1,14 +1,14 @@
-import uuid from "uuid/v4";
+import { v4 as uuidv4 } from "uuid";
 
 const initialState = {
   todos: [
     {
-      id: uuid(),
+      id: uuidv4(),
       name: "Go to the gym",
       complete: false,
     },
     {
-      id: uuid(),
+      id: uuidv4(),
       name: "Do laundry",
       complete: true,
     },
